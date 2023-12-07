@@ -37,9 +37,9 @@ if __name__ == '__main__':
     event.register(fl)
 
     event.notify('TICK', 65)
-    # event.notify('TICK', 67)
-    # event.notify('TICK', 75)
+    event.notify('TICK', 67)
+    event.notify('TICK', 75)
     event.notify('Error', 'Fatal error')
     event.unregister(fl)
     event.notify('TICK', 120)
-    # event.notify('TICK', 130)
+    event.notify('TICK', 130)

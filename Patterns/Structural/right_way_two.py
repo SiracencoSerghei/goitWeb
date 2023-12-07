@@ -4,8 +4,8 @@ from functools import wraps
 def decorator_one(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
-        result = func(*args, **kwargs)
         print("Decorator one")
+        result = func(*args, **kwargs)
         return result
 
     return wrapper
@@ -14,8 +14,8 @@ def decorator_one(func):
 def decorator_two(func):
     @wraps(func)
     def wrapper(*args, **kwargs):
-        result = func(*args, **kwargs)
         print("Decorator two")
+        result = func(*args, **kwargs)
         return result
 
     return wrapper
