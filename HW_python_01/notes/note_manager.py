@@ -1,5 +1,4 @@
 from collections import UserDict
-from contacts.classes.Name import Name
 import json
 
 
@@ -11,7 +10,7 @@ class NotesRecord:
 
             Methods:
                 add_notes: adding of notes to Notes
-                delete_notes: deleating of notes
+                delete_notes: deleting of notes
             """
     def __init__(self, title, notes=None):
         self.title = title

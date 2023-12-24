@@ -1,5 +1,4 @@
 from collections import UserDict
-from datetime import datetime
 import json
 from contacts.classes.Field import Field
 from contacts.classes.Birthday import Birthday
