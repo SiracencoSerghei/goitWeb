@@ -219,7 +219,8 @@ class Bot:
                         try:
                             print(add_contact(self.book, input_data[1], input_data[2:]))
                         except IndexError:
-                            print(f"{RED}You have to put name(or name-surname) and phone(s) after add-contact. Example: \n"
+                            print(f"{RED}You have to put name(or name-surname) and phone(s) after add-contact. "
+                                  f"Example: \n"
                                   f"add-contact <name> <phone1> <phone2> ...{RESET}")
                     case 'add-note':
                         if len(input_data) >= 2:
@@ -229,7 +230,8 @@ class Bot:
 
                     case 'add-todo':
                         if len(input_data) >= 6:
-                            print(add_todo_record_to_file(self.todobook, input_data[1], input_data[2], input_data[3], input_data[4], input_data[5:]))
+                            print(add_todo_record_to_file(self.todobook, input_data[1], input_data[2], input_data[3],
+                                                          input_data[4], input_data[5:]))
                         else:
                             print("Invalid input. Usage: add-todo <title> <begin date> <end date> <status> <tags> ...")
 

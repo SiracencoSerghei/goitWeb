@@ -9,7 +9,7 @@ class Request(Connection):
     def __init__(self, request: requests):
         self.request = request
 
-    def get_json(self, url):
+    def get_json(self, url:str):
         response = self.request.get(url)
         return response.json()
 

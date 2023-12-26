@@ -6,6 +6,7 @@ class ValidPhoneException(Exception):
 class PersonFormatterInfo:
 
     def value_of(self):
+        # Додайте свою реалізацію в інших класах
         raise NotImplementedError
 
 
@@ -33,7 +34,7 @@ class PersonPhoneNumber(PersonFormatterInfo):
 
 
 class Person:
-    def __init__(self, name: str, phone: PersonFormatterInfo, address: PersonFormatterInfo):
+    def __init__(self, name: str, phone: PersonPhoneNumber, address: PersonAddress):
         self.name = name
         self.phone = phone
         self.address = address
