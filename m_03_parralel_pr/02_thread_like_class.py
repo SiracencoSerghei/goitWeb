@@ -19,10 +19,10 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.DEBUG, format="%(threadName)s %(message)s")
     threads = []
     for i in range(5):
-        th = MyThread(name=f"Th#{i}", args=(f"Count thread - {i}", ))  # daemon=True
+        th = MyThread(name=f"Th#{i}", args=(f"Count thread - {i}", ), daemon=True)  # daemon=True
         th.start()
         threads.append(th)
 
-    #[th.join() for th in threads]
+    # [th.join() for th in threads]
     sleep(2)
     logging.debug('End program')

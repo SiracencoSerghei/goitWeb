@@ -16,6 +16,6 @@ if __name__ == '__main__':
     two = Timer(1.5, worker, args=('two param', ))
     two.name = 'Second thread'
     two.start()
-    sleep(1.3)
+    sleep(2)
     two.cancel()
     logging.debug('End program')
