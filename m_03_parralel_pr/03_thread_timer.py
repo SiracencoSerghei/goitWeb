@@ -9,7 +9,10 @@ def worker(param):
 
 
 if __name__ == '__main__':
-    logging.basicConfig(level=logging.DEBUG, format="%(threadName)s %(message)s")
+    logging.basicConfig(level=logging.DEBUG, 
+                        # format="%(threadName)s %(message)s",
+                        format="{threadName}s {message}",
+                        style="{")
     one = Timer(0.5, worker, args=('one param', ))
     one.name = 'First thread'
     one.start()

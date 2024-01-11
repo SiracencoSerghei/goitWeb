@@ -9,7 +9,7 @@ lock = RLock()
 
 def worker():
     global counter
-    while True:
+    while counter < 3:
         #lock.acquire()
         with lock:
             counter += 1
