@@ -1,0 +1,5 @@
+.test:hover {
+    color: blue;
+    background-color: beige;
+    cursor: pointer;
+}
