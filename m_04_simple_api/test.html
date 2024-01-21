@@ -6,11 +6,35 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./test.css"></link>
+    <style>
+        .test:hover {
+    color: blue;
+    background-color: beige;
+    cursor: pointer;
+}
+
+    </style>
+    <!-- <link rel="stylesheet" type="text/css" href="test.css"> -->
 </head>
 <body>
     <h1  id="text">Hello world</h1>
     <button type="button" class="test">Test</button>
 </body>
-<script src="./test.js" type="module"></script>
+<!-- <script src="test.js"></script> -->
+<script>
+    function getRandomHexColor() {
+    return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+  }
+  
+  const colorValue = document.querySelector('#text');
+  const changeColorButton = document.querySelector('.test');
+  
+  changeColorButton.addEventListener('click', onClickChangeColorButton);
+  
+  function onClickChangeColorButton () {
+    colorValue.style.color = getRandomHexColor();
+    document.body.style.backgroundColor = getRandomHexColor();
+  }
+
+</script>
 </html>

@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "app-poetry"
+name = "m_04_simple_api"
 version = "0.1.0"
 description = ""
 authors = ["siracencoserghei <siracencoserghei@gmail.com>"]
@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "app_poetry"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.12"
 requests = "^2.31.0"
 black = {extras = ["d"], version = "^23.12.1"}
 

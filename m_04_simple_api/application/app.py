@@ -5,6 +5,7 @@ import mimetypes
 from http.server import HTTPServer, BaseHTTPRequestHandler
 
 BASE_DIR = pathlib.Path()
+print(BASE_DIR)
 
 
 class HTTPHandler(BaseHTTPRequestHandler):
