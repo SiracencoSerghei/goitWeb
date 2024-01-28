@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "m04-02"
+name = "m04-imple_web_app"
 version = "0.1.0"
 description = ""
-authors = ["Yuriy Kuchma <krabatua@gmail.com>"]
+authors = ["Siracenco Serghei <siracencoserghei@gmail.com>"]
 readme = "README.md"
-packages = [{include = "m04_02"}]
+packages = [{include = "m04_simple_web_app"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
