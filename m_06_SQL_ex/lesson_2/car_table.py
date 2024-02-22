@@ -33,3 +33,4 @@ class CarTable(Table):
 
     def update(self, car: Car, **kwargs):
         super().update(car.__dict__, kwargs)
+        

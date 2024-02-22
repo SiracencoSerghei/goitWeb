@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "m_08_mongo"
+version = "0.1.0"
+description = ""
+authors = ["Siracenco Serghei <siracencoserghei@gmail.com>"]
+readme = "README.md"
+packages = [{include = "m_08_mongo"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pymongo = "^4.6.0"
+mongoengine = "^0.27.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
