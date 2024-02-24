@@ -7,9 +7,10 @@ readme = "README.md"
 packages = [{include = "m_08_mongo"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.12"
 pymongo = "^4.6.0"
 mongoengine = "^0.27.0"
+python-dotenv = "^1.0.1"
 
 
 [build-system]

@@ -1,8 +1,28 @@
 from mongoengine import *
+import os
+from dotenv import load_dotenv
+from pathlib import Path
+
+env_path = Path(__file__).parent.joinpath(".env")
+if env_path.is_file:
+    print(env_path)
+    load_dotenv(env_path)
+
+MONGODB_USER = os.getenv("MONGODB_USER")
+MONGODB_PASS = os.getenv("MONGODB_PASS")
+MONGODB_HOST = os.getenv("MONGODB_HOST")
+MONGODB_URL = os.getenv("MONGODB_URL")
+MONGODB_NAME = os.getenv("MONGODB_NAME")
+
+client = None
+URI = None
+
+if MONGODB_USER:
+    URI = f"{MONGODB_URL}?retryWrites=true&w=majority&appName=Cluster0"
 
 connect(
-    db="web16",
-    host="mongodb+srv://userweb16:****@krabaton.5mlpr.gcp.mongodb.net/?retryWrites=true&w=majority",
+    db="cats",
+    host=URI,
 )
 
 
