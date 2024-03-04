@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "blended-scrapy"
+version = "0.1.0"
+description = ""
+authors = ["Serghei <siracencoserghei@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aioschedule = "^0.5.2"
+aiogram = "^3.4.1"
+asyncio = "^3.4.3"
+bs4 = "^0.0.2"
+python-dotenv = "^1.0.1"
+mongoengine = "^0.28.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

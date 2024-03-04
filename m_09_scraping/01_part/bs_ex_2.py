@@ -1,9 +1,14 @@
 import requests
+from requests import Session
 from bs4 import BeautifulSoup
 
 url = "http://quotes.toscrape.com/"
-page = requests.get(url)
-soup = BeautifulSoup(page.text, "html.parser")
+
+with Session() as session:
+    response = session.get(url)
+soup = BeautifulSoup(response.text, 'lxml')
+# page = requests.get(url)
+# soup = BeautifulSoup(page.text, "html.parser")
 
 
 # знайти перший тег <p> на сторінці
@@ -65,6 +70,8 @@ header = soup.select("#header")
 a = soup.select("div.container a")
 # print(a)
 
+
+print(soup.find('div', class_='tags').find('a'))
 
 if __name__ == '__main__':
     pass
