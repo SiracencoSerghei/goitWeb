@@ -1,0 +1,23 @@
+
+
+{% extends 'app_photo/base.html' %}
+
+{% block body %}
+<div class="container mt-3">
+    <form action="{% url 'app_photo:upload' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+  <div class="mb-3">
+    <label for="exampleInputText" class="form-label">Description</label>
+    
+    <input type="text" class="form-control" id="exampleInputText" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">Description for picture</div>
+  </div>
+  <div class="mb-3">
+    <label for="formFile" class="form-label">Default file input exemple</label>
+    <input type="file" class="form-control" id="formFile">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="reset" class="btn btn-primary">Reset</button>
+</form>
+</div>
+{% endblock %}
