@@ -2,7 +2,7 @@
 name = "peewee-test"
 version = "0.1.0"
 description = ""
-authors = ["Vitalii Bielimov <vbit2000@gmail.com>"]
+authors = ["Siracenco Serghei <siracencoserghei@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

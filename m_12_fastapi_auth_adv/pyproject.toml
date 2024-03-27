@@ -3,7 +3,7 @@ name = "lesson-1"
 version = "0.1.0"
 description = ""
 package-mode = false
-authors = ["Dima Kushchevskyi <d.kushchevskyi@sirinsoftware.com>"]
+authors = ["Siracenco Serghei <siracencoserghei@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

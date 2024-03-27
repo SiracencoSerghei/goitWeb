@@ -2,7 +2,7 @@
 name = "m-07-sqlalchemy-sqllite"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Siracenco Serghei <siracencoserghei@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

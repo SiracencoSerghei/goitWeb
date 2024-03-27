@@ -3,7 +3,7 @@ name = "backend"
 version = "0.1.0"
 package-mode = false
 description = ""
-authors = ["Dima Kushchevskyi <d.kushchevskyi@sirinsoftware.com>"]
+authors = ["Siracenco Serghei <siracencoserghei@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
