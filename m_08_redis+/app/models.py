@@ -2,7 +2,7 @@ from mongoengine import *
 
 connect(
     db="web16",
-    host="mongodb+srv://userweb16:*****@krabaton.5mlpr.gcp.mongodb.net/?retryWrites=true&w=majority",
+    host="mongodb+srv://userweb16:*****@user.5mlpr.gcp.mongodb.net/?retryWrites=true&w=majority",
 )
 
 

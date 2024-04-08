@@ -16,7 +16,7 @@ def main():
     queue_name = 'web_16_campaign'
     channel.queue_declare(queue=queue_name, durable=True)
 
-    consumer = "Krabaton"
+    consumer = "User"
     def callback(ch, method, properties, body):
         pk = body.decode()
         task = Task.objects(id=pk, completed=False).first()
