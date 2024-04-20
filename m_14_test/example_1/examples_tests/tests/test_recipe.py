@@ -1,8 +1,17 @@
 import unittest
 from unittest.mock import patch, mock_open
 
+import sys
+import pathlib
+
+# Add the project root to the sys.path
+project_root = pathlib.Path(__file__).resolve().parents[1]
+sys.path.append(str(project_root))
+
+# Import the function to be tested from the module
 from src.get_recipe.get_recipe import get_recipe
 
+# Create a test class
 
 class TestClass(unittest.TestCase):
     mock_open_file = None
@@ -34,3 +43,7 @@ class TestClass(unittest.TestCase):
             result = get_recipe(filename, uuid)
             self.assertEqual(uuid, result.get('id'))
             self.assertEqual('Lemon Pancakes', result.get('name'))
+
+if __name__ == "__main__":
+    unittest.main()
+

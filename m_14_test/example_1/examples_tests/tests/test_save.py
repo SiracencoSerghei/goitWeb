@@ -1,6 +1,10 @@
 import unittest
+import pathlib
+import sys
 from unittest.mock import patch, mock_open, call
-
+# Add the project root to the sys.path
+project_root = pathlib.Path(__file__).resolve().parents[1]
+sys.path.append(str(project_root))
 from src.save_data.answer import applicant, save_applicant_data
 
 
@@ -27,3 +31,6 @@ class TestClass(unittest.TestCase):
         self.mock_open_file().write.call_with('Ivanchuk Boryslav,101,135,150,165\n')
         self.mock_open_file().write.call_with('Karpenko Dmitro,201,155,175,185\n')
         self.mock_open_file().write.assert_has_calls(calls, any_order=True)
+
+if __name__ == "__main__":
+    unittest.main()

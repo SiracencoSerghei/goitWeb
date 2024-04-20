@@ -27,3 +27,6 @@ class TestClass(unittest.TestCase):
         load_mock.assert_called_with(self.mock_open_file())
         self.assertListEqual(result, self.contacts)
 
+
+if __name__ == "__main__":
+    unittest.main()

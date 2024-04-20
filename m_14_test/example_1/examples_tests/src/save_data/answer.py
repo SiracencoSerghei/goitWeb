@@ -1,10 +1,18 @@
+import pathlib
+import sys
+
+project_root = (
+    pathlib.Path(__file__).resolve().parents[1]
+)  # Go two levels up to reach the project root
+sys.path.append(str(project_root))
+
 def save_applicant_data(source, output):
-    with open(output, "w", encoding="utf-8") as f:  #
-        for applicant in source:  #
-            f.write(  #
-                #
+    with open(output, "w", encoding="utf-8") as f:  
+        for applicant in source:  
+            f.write(  
+                
                 f"{applicant.get('name')},{applicant.get('specialty')},{applicant.get('math')},{applicant.get('lang')},{applicant.get('eng')}\n"
-            )  #
+            )  
 
 
 applicant = [
@@ -32,4 +40,9 @@ applicant = [
 ]
 
 if __name__ == '__main__':
-    save_applicant_data(applicant, 'data.csv')
+    script_directory = pathlib.Path(__file__).resolve().parent
+    output = 'data.csv'
+    # Construct the absolute path to the output file in the script's directory
+    output_path = script_directory / output
+
+    save_applicant_data(applicant, output_path)

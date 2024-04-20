@@ -17,5 +17,6 @@ class TestClass(unittest.TestCase):
         with patch.object(src.reduce_sum.answer, 'reduce') as mock_reduce:
             mock_reduce.return_value = 196
             result = sum_numbers(numbers)
+            print(f"{result=}")
             self.assertEqual(result, 196)
             mock_other.assert_called()

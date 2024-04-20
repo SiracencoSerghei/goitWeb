@@ -18,6 +18,7 @@ class Dog(Animal):
 
 
 class CatDog(Cat, Dog):  #
+    # pass
     def info(self):  #
         return f"{self.nickname}-{self.weight}"  #
 
